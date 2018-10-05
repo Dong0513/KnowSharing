@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?><!--社区内容展示示例-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_gravity="start"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/community_avator"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                />
+
+            <TextView
+                android:id="@+id/community_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="@string/community_item_author"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <TextView
+                android:id="@+id/community_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="正文内容" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/community_uploadtime"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="@string/community_item_uploadtime" />
+
+            <ImageView
+                android:id="@+id/community_like"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_toStartOf="@id/community_like_numbers"
+                android:src="@drawable/community_like" />
+
+            <TextView
+                android:id="@+id/community_like_numbers"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_toStartOf="@id/community_comment"
+                android:text="30" />
+
+            <ImageView
+                android:id="@+id/community_comment"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_toStartOf="@id/community_comment_numbers"
+                android:src="@drawable/community_comment" />
+
+            <TextView
+                android:id="@+id/community_comment_numbers"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:text="30" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

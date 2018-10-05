@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/toolbar_square"
+        android:title="@string/toolbar_square"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/toolbar_create_chat"
+        android:title="@string/toolbar_create_chat"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/toolbar_find_friends"
+        android:title="@string/toolbar_find_friends"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/toolbar_sweep"
+        android:title="@string/toolbar_sweep"
+        app:showAsAction="never"/>
+
+</menu>

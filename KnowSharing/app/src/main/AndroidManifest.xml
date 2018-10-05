@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="innovation.competition.com.knowsharing">
+
+
+    <!-- Required -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:name=".application.BaseApplication"
+        android:supportsRtl="true">
+
+        <!--TODO 集成：1.3、配置Bmob平台的应用密钥-->
+        <meta-data
+            android:name="Bmob_APP_KEY"
+            android:value="c29fe19818e7ca634daab203320f8da0" />
+
+        <!--TODO 集成：1.5、配置IM SDK需要的广播和服务-->
+        <receiver android:name="cn.bmob.newim.core.ConnectChangeReceiver" >
+            <intent-filter>
+                <action android:name="cn.bmob.action.RECONNECT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="cn.bmob.newim.core.service.BmobIMService"
+            android:process=":bmobcore" />
+        <service
+            android:name="cn.bmob.newim.core.service.NotifyService"
+            android:process=":bmobcore" />
+        <service android:name="cn.bmob.newim.core.service.ReConnectService" />
+        <service android:name="cn.bmob.newim.core.service.HeartBeatService" />
+
+
+        <activity android:name=".LoginActivity"
+            android:theme="@style/NoActionFullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <!--测试-->
+        <!--<activity android:name=""
+            android:theme="@style/NoActionFullscreen"/>-->
+        <!--登录-->
+        <activity android:name=".MainActivity"
+            android:theme="@style/NoActionFullscreen"/>
+        <!--注册-->
+        <activity android:name=".ui.RegisteredActivity"
+            android:theme="@style/NoActionFullscreen"/>
+        <!--闪屏页-->
+        <activity android:name=".ui.SplashActivity"
+            android:theme="@style/NoActionFullscreen"/>
+
+        <!--引导页-->
+        <activity android:name="innovation.competition.com.knowsharing.ui.GuideActivity"
+            android:theme="@style/NoActionFullscreen"/>
+
+        <!--用户页面-->
+        <!--聊天Activity-->
+
+        <!--创建群聊-->
+        <activity android:name=".ui.CreRoomActivity"
+            android:theme="@style/NoActionFullscreen"/>
+        <!--查找朋友-->
+        <activity android:name=".ui.FindFrisActivity"
+            android:theme="@style/NoActionFullscreen"/>
+        <!--个人资料-->
+        <activity android:name=".ui.EditDataActivity"
+            android:theme="@style/NoActionFullscreen"/>
+        <!--聊天界面-->
+        <!--好友列表-->
+        <!--发文详情界面-->
+        <activity android:name=".ui.CommentActivity"
+            android:theme="@style/NoActionFullscreen"/>
+        <!--底部加号页面-->
+        <activity android:name=".ui.PostSwipeActivity"
+            android:theme="@style/NoActionFullscreen"/>
+        <!--发文字按钮-->
+        <activity android:name=".ui.IdeaSwipeActivity"
+            android:theme="@style/NoActionFullscreen"/>
+        <!--发照片视频按钮-->
+        <!--头像选择器-->
+        <activity
+            android:name="com.wildma.pictureselector.PictureSelectActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <!--搜索-->
+        <activity android:name=".ui.SearchActivity"
+            android:theme="@style/NoActionFullscreen"/>
+
+        <!--个人资料界面-->
+        <activity android:name=".ui.UserInfoActivity"
+            android:theme="@style/NoActionFullscreen"/>
+
+        <!--NicknameActivity-->
+        <activity android:name=".ui.NicknameActivity"
+            android:theme="@style/NoActionFullscreen"/>
+
+        <!--搜索用户-->
+        <activity android:name=".ui.SearchUserActivity"
+            android:theme="@style/NoActionFullscreen"/>
+
+        <!--关注-->
+        <activity android:name=".ui.ContactActivity"
+            android:theme="@style/NoActionFullscreen"/>
+        <!--个人详情-->
+        <activity android:name=".ui.UserMessageActivity"
+            android:theme="@style/NoActionFullscreen"/>
+        <!--新好友请求-->
+        <activity android:name=".ui.NewFriendActivity"
+            android:theme="@style/NoActionFullscreen"/>
+        <!--聊天-->
+        <activity android:name=".ui.ChatActivity"
+            android:theme="@style/NoActionFullscreen"/>
+    </application>
+
+</manifest>
